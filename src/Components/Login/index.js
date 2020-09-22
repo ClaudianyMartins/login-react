@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./login.css";
 export default class Login extends Component {
   state = {
     senha: "",
@@ -21,7 +21,8 @@ export default class Login extends Component {
       <div>
         <h1>Bem vindo ao Login</h1>
         <form>
-          {this.state.error && <p>{this.state.error}</p>}
+          {this.state.error && <p id="error">{this.state.error}</p>}
+          <label>Usuário </label>
           <input
             type="text"
             placeholder="Informe seu usuário"
@@ -30,6 +31,7 @@ export default class Login extends Component {
           />
           <br />
           <br />
+          <label>Senha </label>
           <input
             type="password"
             placeholder="Informe sua senha"
